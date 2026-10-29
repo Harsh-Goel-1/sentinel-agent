@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: sentinel-agent
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+sentinel:
+  openai:
+    api-key: ${OPENAI_API_KEY:}
+    model: ${OPENAI_MODEL:gpt-4o}
+    base-url: ${OPENAI_BASE_URL:https://api.openai.com/v1}
+    temperature: 0.2
+    max-tokens: 2048
+  samples-dir: samples
+
